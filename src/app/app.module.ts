@@ -3,6 +3,8 @@ import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
+import { ROUTES } from './app.routes';
+
 import { AppComponent } from './app.component';
 import { HeaderComponent, HomeComponent, AboutComponent } from './components';
 
@@ -16,7 +18,7 @@ import { HeaderComponent, HomeComponent, AboutComponent } from './components';
   imports: [
     BrowserModule,
     HttpModule,
-    RouterModule
+    RouterModule.forRoot(ROUTES)
   ],
   providers: [],
   bootstrap: [AppComponent]
