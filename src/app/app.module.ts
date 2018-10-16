@@ -6,14 +6,20 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { HeaderComponent, HomeComponent, AboutComponent } from './components';
+import { 
+  HeaderComponent, 
+  HomeComponent, 
+  AboutComponent, 
+  RestaurantsComponent
+} from './components';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AboutComponent
+    AboutComponent,
+    RestaurantsComponent
   ],
   imports: [
     BrowserModule,
