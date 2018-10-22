@@ -10,7 +10,8 @@ import {
   HeaderComponent, 
   HomeComponent, 
   AboutComponent, 
-  RestaurantsComponent
+  RestaurantsComponent,
+  RestaurantComponent
 } from './components';
 
 @NgModule({
@@ -19,7 +20,8 @@ import {
     HeaderComponent,
     HomeComponent,
     AboutComponent,
-    RestaurantsComponent
+    RestaurantsComponent,
+    RestaurantComponent
   ],
   imports: [
     BrowserModule,
