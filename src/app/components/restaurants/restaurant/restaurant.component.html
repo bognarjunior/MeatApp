@@ -1,12 +1,12 @@
-<a href="detail-restaurant.html">
+<a href="#">
   <div class="place-info-box">
-    <span class="place-info-box-icon"><img src="assets/img/restaurants/tasty.png" /></span>
+    <span class="place-info-box-icon"><img [src]="restaurant.imagePath" /></span>
 
     <div class="place-info-box-content">
-      <span class="place-info-box-text">Tasty Treats</span>
-      <span class="place-info-box-star"><i class="fa fa-star"></i> 4.5</span>
-      <span class="place-info-box-detail">Bakery</span>
-      <span class="place-info-box-detail">40-65m</span>
+      <span class="place-info-box-text">{{restaurant.name}}</span>
+      <span class="place-info-box-star"><i class="fa fa-star"></i> {{restaurant.rating}}</span>
+      <span class="place-info-box-detail">{{restaurant.category}}</span>
+      <span class="place-info-box-detail">{{restaurant.deliveryEstimate}}</span>
     </div>
     <!-- /.info-box-content -->
   </div>
