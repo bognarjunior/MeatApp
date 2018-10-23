@@ -11,7 +11,8 @@ import {
   HomeComponent, 
   AboutComponent, 
   RestaurantsComponent,
-  RestaurantComponent
+  RestaurantComponent,
+  RestaurantService
 } from './components';
 
 @NgModule({
@@ -28,7 +29,9 @@ import {
     HttpModule,
     RouterModule.forRoot(ROUTES)
   ],
-  providers: [],
+  providers: [
+    RestaurantService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
