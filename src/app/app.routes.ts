@@ -1,5 +1,12 @@
-import { Routes } from "@angular/router";
-import { HomeComponent, AboutComponent, RestaurantsComponent, RestaurantDetailComponent } from "./components";
+import { Routes } from '@angular/router';
+import {
+  HomeComponent,
+  AboutComponent,
+  RestaurantsComponent,
+  RestaurantDetailComponent,
+  MenuComponent,
+  ReviewsComponent
+} from './components';
 
 export const ROUTES: Routes = [
   {
@@ -16,6 +23,21 @@ export const ROUTES: Routes = [
   },
   {
     path: 'restaurants/:id',
-    component: RestaurantDetailComponent
+    component: RestaurantDetailComponent,
+    children:[
+      {
+        path: '',
+        redirectTo: 'menu',
+        pathMatch: 'full'
+      },
+      {
+        path: 'menu',
+        component: MenuComponent
+      },
+      {
+        path: 'reviews',
+        component: ReviewsComponent
+      },
+    ]
   }
 ];
