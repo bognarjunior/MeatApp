@@ -6,10 +6,10 @@ import { RouterModule } from '@angular/router';
 import { ROUTES } from './app.routes';
 
 import { AppComponent } from './app.component';
-import { 
-  HeaderComponent, 
-  HomeComponent, 
-  AboutComponent, 
+import {
+  HeaderComponent,
+  HomeComponent,
+  AboutComponent,
   RestaurantsComponent,
   RestaurantComponent,
   RestaurantService,
@@ -17,7 +17,9 @@ import {
   MenuComponent,
   ShoppingCartComponent,
   MenuItemComponent,
+  ReviewsComponent
 } from './components';
+
 
 @NgModule({
   declarations: [
@@ -30,7 +32,8 @@ import {
     RestaurantDetailComponent,
     MenuComponent,
     ShoppingCartComponent,
-    MenuItemComponent
+    MenuItemComponent,
+    ReviewsComponent
   ],
   imports: [
     BrowserModule,
