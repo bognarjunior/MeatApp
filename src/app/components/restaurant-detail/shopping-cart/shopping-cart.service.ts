@@ -1,9 +1,10 @@
 import { CartItem } from './cart-item.model';
+import { MenuItem } from '../menu-item';
 
 export class ShoppingCartService {
     items: CartItem[];
 
-    addItem(item: CartItem) {
+    addItem(item: MenuItem) {
 
     }
 
@@ -12,7 +13,7 @@ export class ShoppingCartService {
     }
 
     clear(): void {
-
+        this.items = [];
     }
 
     total(): number {
