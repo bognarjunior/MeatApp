@@ -17,7 +17,8 @@ import {
   MenuComponent,
   ShoppingCartComponent,
   MenuItemComponent,
-  ReviewsComponent
+  ReviewsComponent,
+  ShoppingCartService
 } from './components';
 
 
@@ -41,7 +42,7 @@ import {
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RestaurantService
+    RestaurantService, ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })

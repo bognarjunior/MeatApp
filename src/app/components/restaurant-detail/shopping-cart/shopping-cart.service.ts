@@ -2,7 +2,7 @@ import { CartItem } from './cart-item.model';
 import { MenuItem } from '../menu-item';
 
 export class ShoppingCartService {
-    items: CartItem[];
+    items: CartItem[] = [];
 
     addItem(item: MenuItem) {
         let foundItem = this.items.find( mItem => mItem.menuItem.id === item.id);
