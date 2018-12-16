@@ -18,9 +18,9 @@ import {
   ShoppingCartComponent,
   MenuItemComponent,
   ReviewsComponent,
-  ShoppingCartService
+  ShoppingCartService,
+  OrderComponent
 } from './components';
-
 
 @NgModule({
   declarations: [
@@ -34,7 +34,8 @@ import {
     MenuComponent,
     ShoppingCartComponent,
     MenuItemComponent,
-    ReviewsComponent
+    ReviewsComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
