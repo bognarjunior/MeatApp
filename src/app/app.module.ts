@@ -23,6 +23,8 @@ import {
   OrderComponent
 } from './components';
 
+import { InputComponent } from './shared';
+
 
 @NgModule({
   declarations: [
@@ -37,7 +39,8 @@ import {
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderComponent
+    OrderComponent,
+    InputComponent
   ],
   imports: [
     BrowserModule,
