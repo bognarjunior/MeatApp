@@ -23,7 +23,10 @@ import {
   OrderComponent
 } from './components';
 
-import { InputComponent } from './shared';
+import {
+  InputComponent,
+  RadioComponent
+} from './shared';
 
 
 @NgModule({
@@ -40,7 +43,8 @@ import { InputComponent } from './shared';
     MenuItemComponent,
     ReviewsComponent,
     OrderComponent,
-    InputComponent
+    InputComponent,
+    RadioComponent
   ],
   imports: [
     BrowserModule,
