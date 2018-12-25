@@ -21,7 +21,8 @@ import {
   ReviewsComponent,
   ShoppingCartService,
   OrderComponent,
-  OrderItemsComponent
+  OrderItemsComponent,
+  OrderService
 } from './components';
 
 import {
@@ -56,6 +57,7 @@ import {
   providers: [
     RestaurantService,
     ShoppingCartService,
+    OrderService,
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
