@@ -1,3 +1,15 @@
-<p>
-  radio works!
-</p>
+<div *ngFor="let option of options">
+  <label>
+    <div 
+      class="iradio_flat-red" 
+      aria-checked="false" 
+      aria-disabled="false"
+      [class.checked]="option.value === value"
+      style="position: relative;"
+      (click)="setValue(option.value)"
+    >
+      <ins class="iCheck-helper" style="position: absolute; top: 0%; left: 0%; display: block; width: 100%; height: 100%; margin: 0px; padding: 0px; background: rgb(255, 255, 255); border: 0px; opacity: 0;"></ins>
+    </div>
+    {{option.label}}
+  </label>
+</div>
