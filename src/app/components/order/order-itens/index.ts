@@ -1,1 +1,1 @@
-export * from './order-itens.component';
+export * from './order-items.component';

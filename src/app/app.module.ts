@@ -21,7 +21,7 @@ import {
   ReviewsComponent,
   ShoppingCartService,
   OrderComponent,
-  OrderItensComponent
+  OrderItemsComponent
 } from './components';
 
 import {
@@ -45,8 +45,7 @@ import {
     OrderComponent,
     InputComponent,
     RadioComponent,
-    OrderItensSpec=falseComponent,
-    OrderItensComponent
+    OrderItemsComponent
   ],
   imports: [
     BrowserModule,
