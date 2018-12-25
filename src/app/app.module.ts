@@ -20,14 +20,14 @@ import {
   MenuItemComponent,
   ReviewsComponent,
   ShoppingCartService,
-  OrderComponent
+  OrderComponent,
+  OrderItensComponent
 } from './components';
 
 import {
   InputComponent,
   RadioComponent
 } from './shared';
-
 
 @NgModule({
   declarations: [
@@ -44,7 +44,9 @@ import {
     ReviewsComponent,
     OrderComponent,
     InputComponent,
-    RadioComponent
+    RadioComponent,
+    OrderItensSpec=falseComponent,
+    OrderItensComponent
   ],
   imports: [
     BrowserModule,
