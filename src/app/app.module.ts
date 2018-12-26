@@ -30,6 +30,7 @@ import {
   InputComponent,
   RadioComponent
 } from './shared';
+import { OrderSummaryComponent } from './components/order-summary/order-summary.component';
 
 @NgModule({
   declarations: [
@@ -48,7 +49,8 @@ import {
     InputComponent,
     RadioComponent,
     OrderItemsComponent,
-    DeliveryCostsComponent
+    DeliveryCostsComponent,
+    OrderSummaryComponent
   ],
   imports: [
     BrowserModule,
