@@ -7,6 +7,10 @@ export class OrderService {
     private cartService: ShoppingCartService
   ) {}
 
+  itemsValue(): number {
+    return this.cartService.total();
+  }
+
   cartItems(): Array<CartItem> {
     return this.cartService.items;
   }
