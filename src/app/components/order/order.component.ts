@@ -45,4 +45,8 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item);
   }
 
+  checkOrder(order: any) {
+    
+  }
+
 }

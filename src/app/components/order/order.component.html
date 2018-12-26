@@ -88,6 +88,7 @@
         <button 
           [disabled]="!form.valid || cartItems().length === 0" 
           class="btn btn-success pull-right"
+          (click)="checkOrder(form.value)"
         ><i class="fa fa-credit-card"></i> Concluir Pedido
         </button>
       </div>
