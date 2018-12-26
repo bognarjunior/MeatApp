@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { RadioOption } from './../../shared';
 import { OrderService } from './order.service';
 import { CartItem } from '../restaurant-detail';
+import { Order, OrderItem } from './order.model';
 
 @Component({
   selector: 'mt-order',
@@ -45,8 +46,15 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item);
   }
 
-  checkOrder(order: any) {
-    
+  checkOrder(order: Order) {
+    order.orderItems = this.cartItems().map(
+      (item: CartItem) => new OrderItem(item.quantity, item.menuItem.id)
+    );
+    this.orderService.checkOrder(order).subscribe(
+      (orderId: string) => {
+        console.log('OrderID', orderId);
+        this.orderService.clear();
+    });
   }
 
 }
