@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import {
   HomeComponent,
-  AboutComponent,
   RestaurantsComponent,
   RestaurantDetailComponent,
   MenuComponent,
@@ -17,7 +16,7 @@ export const ROUTES: Routes = [
   },
   {
     path: 'about',
-    component: AboutComponent
+    loadChildren: './components/about/about.module#AboutModule'
   },
   {
     path: 'restaurants',

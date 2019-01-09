@@ -10,7 +10,6 @@ import { AppComponent } from './app.component';
 import {
   HeaderComponent,
   HomeComponent,
-  AboutComponent,
   RestaurantsComponent,
   RestaurantComponent,
   RestaurantService,
@@ -38,7 +37,6 @@ import {
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    AboutComponent,
     RestaurantsComponent,
     RestaurantComponent,
     RestaurantDetailComponent,
