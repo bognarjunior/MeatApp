@@ -5,7 +5,6 @@ import {
   RestaurantDetailComponent,
   MenuComponent,
   ReviewsComponent,
-  OrderComponent,
   OrderSummaryComponent
 } from './components';
 
@@ -24,7 +23,7 @@ export const ROUTES: Routes = [
   },
   {
     path: 'order',
-    component: OrderComponent
+    loadChildren: './components/order/order.module#OrderModule'
   },
   {
     path: 'order-summary',
