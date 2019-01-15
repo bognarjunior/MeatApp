@@ -3,9 +3,9 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { ROUTES } from 'app.routes';
+import { ROUTES } from 'app/app.routes';
 
-import { AppComponent } from 'app.component';
+import { AppComponent } from 'app/app.component';
 import {
   HeaderComponent,
   HomeComponent,
