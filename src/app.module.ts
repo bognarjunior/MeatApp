@@ -3,9 +3,9 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 
-import { ROUTES } from './app.routes';
+import { ROUTES } from 'app.routes';
 
-import { AppComponent } from './app.component';
+import { AppComponent } from 'app.component';
 import {
   HeaderComponent,
   HomeComponent,
@@ -20,9 +20,9 @@ import {
   ShoppingCartService,
   OrderService,
   OrderSummaryComponent
-} from './components';
+} from 'app/components';
 
-import { SharedModule } from './shared';
+import { SharedModule } from 'app/shared';
 
 
 @NgModule({

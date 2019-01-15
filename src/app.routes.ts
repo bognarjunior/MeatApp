@@ -6,7 +6,7 @@ import {
   MenuComponent,
   ReviewsComponent,
   OrderSummaryComponent
-} from './components';
+} from './app/components';
 
 export const ROUTES: Routes = [
   {
@@ -15,7 +15,7 @@ export const ROUTES: Routes = [
   },
   {
     path: 'about',
-    loadChildren: './components/about/about.module#AboutModule'
+    loadChildren: './app/components/about/about.module#AboutModule'
   },
   {
     path: 'restaurants',
@@ -23,7 +23,7 @@ export const ROUTES: Routes = [
   },
   {
     path: 'order',
-    loadChildren: './components/order/order.module#OrderModule'
+    loadChildren: './app/components/order/order.module#OrderModule'
   },
   {
     path: 'order-summary',

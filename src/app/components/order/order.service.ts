@@ -4,7 +4,7 @@ import { Order } from './order.model';
 import { Observable } from 'rxjs/Observable';
 import { Http, RequestOptions, Headers } from '@angular/http';
 import 'rxjs/add/operator/map';
-import { MEAT_API } from 'app/app.api';
+import { MEAT_API } from '../../../app.api';
 
 @Injectable()
 export class OrderService {
