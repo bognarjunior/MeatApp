@@ -11,18 +11,16 @@ import {
   HomeComponent,
   RestaurantsComponent,
   RestaurantComponent,
-  RestaurantService,
   RestaurantDetailComponent,
   MenuComponent,
   ShoppingCartComponent,
   MenuItemComponent,
   ReviewsComponent,
-  ShoppingCartService,
-  OrderService,
   OrderSummaryComponent
 } from 'app/components';
 
 import { SharedModule } from 'app/shared';
+import { CoreModule } from './core/core.module';
 
 
 @NgModule({
@@ -43,12 +41,10 @@ import { SharedModule } from 'app/shared';
     BrowserModule,
     HttpModule,
     SharedModule,
+    CoreModule,
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
-    RestaurantService,
-    ShoppingCartService,
-    OrderService,
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
