@@ -20,8 +20,6 @@ import {
 } from 'app/components';
 
 import { SharedModule } from 'app/shared';
-import { CoreModule } from './core/core.module';
-
 
 @NgModule({
   declarations: [
@@ -40,8 +38,7 @@ import { CoreModule } from './core/core.module';
   imports: [
     BrowserModule,
     HttpModule,
-    SharedModule,
-    CoreModule,
+    SharedModule.forRoot(),
     RouterModule.forRoot(ROUTES)
   ],
   providers: [
