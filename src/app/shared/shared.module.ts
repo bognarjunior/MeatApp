@@ -6,12 +6,14 @@ import { ShoppingCartService, RestaurantService, OrderService } from 'app/compon
 import { InputComponent } from './input';
 import { RadioComponent } from './radio';
 import { RatingComponent } from './rating';
+import { SnackbarComponent } from './messages';
 
 @NgModule({
     declarations: [
         InputComponent,
         RadioComponent,
-        RatingComponent
+        RatingComponent,
+        SnackbarComponent
     ],
     imports: [
         CommonModule,
@@ -22,6 +24,7 @@ import { RatingComponent } from './rating';
         InputComponent,
         RadioComponent,
         RatingComponent,
+        SnackbarComponent,
         CommonModule,
         FormsModule,
         ReactiveFormsModule
