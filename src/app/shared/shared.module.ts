@@ -6,7 +6,7 @@ import { ShoppingCartService, RestaurantService, OrderService } from 'app/compon
 import { InputComponent } from './input';
 import { RadioComponent } from './radio';
 import { RatingComponent } from './rating';
-import { SnackbarComponent } from './messages';
+import { SnackbarComponent, NotificationService } from './messages';
 
 @NgModule({
     declarations: [
@@ -37,7 +37,8 @@ export class SharedModule {
             providers: [
                 ShoppingCartService,
                 RestaurantService,
-                OrderService
+                OrderService,
+                NotificationService
             ]
         }
     }
