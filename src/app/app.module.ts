@@ -3,6 +3,7 @@ import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { ROUTES } from 'app/app.routes';
 
@@ -43,12 +44,16 @@ import { SharedModule } from 'app/shared';
     BrowserAnimationsModule,
     HttpModule,
     SharedModule.forRoot(),
-    RouterModule.forRoot(ROUTES, 
+    RouterModule.forRoot(ROUTES,
       {
         preloadingStrategy: PreloadAllModules
       })
   ],
   providers: [
+    {
+      provide: LocationStrategy,
+      useClass: HashLocationStrategy
+    },
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
