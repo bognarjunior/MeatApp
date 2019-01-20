@@ -17,7 +17,8 @@ import {
   ShoppingCartComponent,
   MenuItemComponent,
   ReviewsComponent,
-  OrderSummaryComponent
+  OrderSummaryComponent,
+  NotFoundComponent
 } from 'app/components';
 
 import { SharedModule } from 'app/shared';
@@ -34,7 +35,8 @@ import { SharedModule } from 'app/shared';
     ShoppingCartComponent,
     MenuItemComponent,
     ReviewsComponent,
-    OrderSummaryComponent
+    OrderSummaryComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
