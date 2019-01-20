@@ -5,7 +5,8 @@ import {
   RestaurantDetailComponent,
   MenuComponent,
   ReviewsComponent,
-  OrderSummaryComponent
+  OrderSummaryComponent,
+  NotFoundComponent
 } from './components';
 
 export const ROUTES: Routes = [
@@ -47,5 +48,9 @@ export const ROUTES: Routes = [
         component: ReviewsComponent
       },
     ]
-  }
+  },
+  {
+    path: '**',
+    component: NotFoundComponent
+  },
 ];
