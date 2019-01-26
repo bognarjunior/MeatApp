@@ -7,9 +7,9 @@
 
   <div class="row">
     <div class="col-xs-12 search-bar" [@toggleSearch]="searchBarState">
-      <form>
+      <form [formGroup]="searchForm">
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Search...">
+          <input type="text" formControlName="searchControl" class="form-control" placeholder="Search...">
         </div>
       </form>
     </div>
