@@ -28,7 +28,11 @@
     <div *ngFor="let restaurant of restaurants" class="col-sm-6 col-xs-12">
       <mt-restaurant [restaurant]="restaurant"></mt-restaurant>
     </div>
-    <!-- /.col -->
+    <div *ngIf="restaurants?.length === 0" class="col-xs-12">
+      <p class="lead text-center">
+        Não foram encontrados itens para <b>"{{iptSearch.value}}" </b>
+      </p>
+    </div>
   </div>
 
 </section>
