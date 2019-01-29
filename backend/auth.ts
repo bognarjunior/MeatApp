@@ -2,6 +2,7 @@ import { Request, Response } from 'express';
 import * as jwt from 'jsonwebtoken';
 
 import { User, users } from './users';
+import { apiConfig } from './api-config';
 
 export const handleAuthentication = (req: Request, res: Response) => {
     const user: User = req.body;
@@ -10,7 +11,7 @@ export const handleAuthentication = (req: Request, res: Response) => {
         const token = jwt.sign({
             sub: dbUser.email,
             iss: 'meat-api'
-        }, 'meat-api-password');
+        }, apiConfig.secret);
         res.json({
             name: dbUser.name,
             email: dbUser.email,
