@@ -36,11 +36,11 @@ export class InputComponent implements OnInit, AfterContentInit {
     }
   }
 
-  hasSuccess(): boolean{
+  hasSuccess(): boolean {
     return this.inputValue.valid && (this.inputValue.dirty || this.inputValue.touched);
   }
 
-  hasError(): boolean{
+  hasError(): boolean {
     return !this.inputValue.valid && (this.inputValue.dirty || this.inputValue.touched);
   }
 
