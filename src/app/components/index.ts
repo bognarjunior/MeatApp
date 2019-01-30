@@ -6,4 +6,5 @@ export * from './restaurant-detail';
 export * from './order';
 export * from './order-summary';
 export * from './not-found';
+export * from  './security';
 

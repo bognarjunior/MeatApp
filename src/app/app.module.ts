@@ -19,7 +19,8 @@ import {
   MenuItemComponent,
   ReviewsComponent,
   OrderSummaryComponent,
-  NotFoundComponent
+  NotFoundComponent,
+  LoginComponent
 } from 'app/components';
 
 import { SharedModule } from 'app/shared';
@@ -37,7 +38,8 @@ import { SharedModule } from 'app/shared';
     MenuItemComponent,
     ReviewsComponent,
     OrderSummaryComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
