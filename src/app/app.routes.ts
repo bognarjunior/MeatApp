@@ -6,13 +6,18 @@ import {
   MenuComponent,
   ReviewsComponent,
   OrderSummaryComponent,
-  NotFoundComponent
+  NotFoundComponent,
+  LoginComponent
 } from './components';
 
 export const ROUTES: Routes = [
   {
     path: '',
     component: HomeComponent
+  },
+  {
+    path: 'login',
+    component: LoginComponent
   },
   {
     path: 'about',
