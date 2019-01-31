@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
-import { RadioOption } from './../../shared';
 import { OrderService } from './order.service';
 import { CartItem } from '../restaurant-detail';
 import { Order, OrderItem } from './order.model';
 import { Router } from '@angular/router';
+import { RadioOption } from 'app/shared';
 
 @Component({
   selector: 'mt-order',
@@ -41,7 +41,7 @@ export class OrderComponent implements OnInit {
       number: this.formBuilder.control('', [Validators.required, Validators.pattern(this.numberPattern)]),
       optionalAddress: this.formBuilder.control(''),
       paymentOption: this.formBuilder.control('', [Validators.required])
-    },{ validator: OrderComponent.equalsTo } );
+    }, { validator: OrderComponent.equalsTo } );
   }
 
   // tslint:disable-next-line:member-ordering

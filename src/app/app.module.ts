@@ -21,7 +21,7 @@ import {
   OrderSummaryComponent,
   NotFoundComponent,
   LoginComponent
-} from 'app/components';
+} from 'app';
 
 import { SharedModule } from 'app/shared';
 

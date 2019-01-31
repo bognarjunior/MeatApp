@@ -5,8 +5,8 @@ import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/catch';
 
 import { Restaurant } from './restaurant.model';
-import { MEAT_API } from '../../../app.api';
-import { MenuItem } from 'app/components/restaurant-detail';
+import { MenuItem } from 'app/restaurant-detail';
+import { MEAT_API } from 'app/app.api';
 
 @Injectable()
 export class RestaurantService {

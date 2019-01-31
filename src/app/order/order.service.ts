@@ -7,7 +7,7 @@ import { ShoppingCartService, CartItem } from '../restaurant-detail';
 import { LoginService } from '../security';
 
 import { Order } from './order.model';
-import { MEAT_API } from '../../app.api';
+import { MEAT_API } from 'app/app.api';
 
 @Injectable()
 export class OrderService {

@@ -1,14 +1,16 @@
 import { Routes } from '@angular/router';
 import {
   HomeComponent,
-  RestaurantsComponent,
-  RestaurantDetailComponent,
+  LoggedInGuard,
+  LoginComponent,
   MenuComponent,
-  ReviewsComponent,
-  OrderSummaryComponent,
   NotFoundComponent,
-  LoginComponent
-} from './components';
+  OrderSummaryComponent,
+  RestaurantDetailComponent,
+  RestaurantsComponent,
+  ReviewsComponent
+} from 'app';
+
 
 export const ROUTES: Routes = [
   {
@@ -21,7 +23,7 @@ export const ROUTES: Routes = [
   },
   {
     path: 'about',
-    loadChildren: './components/about/about.module#AboutModule'
+    loadChildren: './about/about.module#AboutModule'
   },
   {
     path: 'restaurants',
@@ -29,7 +31,8 @@ export const ROUTES: Routes = [
   },
   {
     path: 'order',
-    loadChildren: './components/order/order.module#OrderModule'
+    loadChildren: './order/order.module#OrderModule',
+    canLoad: [LoggedInGuard]
   },
   {
     path: 'order-summary',
@@ -38,7 +41,7 @@ export const ROUTES: Routes = [
   {
     path: 'restaurants/:id',
     component: RestaurantDetailComponent,
-    children:[
+    children: [
       {
         path: '',
         redirectTo: 'menu',

@@ -1,7 +1,7 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { ShoppingCartService, RestaurantService, OrderService, LoginService } from 'app/components';
+import { ShoppingCartService, RestaurantService, OrderService, LoginService, LoggedInGuard } from 'app';
 
 import { InputComponent } from './input';
 import { RadioComponent } from './radio';
@@ -39,7 +39,8 @@ export class SharedModule {
                 RestaurantService,
                 OrderService,
                 NotificationService,
-                LoginService
+                LoginService,
+                LoggedInGuard
             ]
         }
     }
