@@ -22,6 +22,10 @@ export const ROUTES: Routes = [
     component: LoginComponent
   },
   {
+    path: 'login/:to',
+    component: LoginComponent
+  },
+  {
     path: 'about',
     loadChildren: './about/about.module#AboutModule'
   },
