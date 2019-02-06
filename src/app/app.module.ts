@@ -3,7 +3,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { LocationStrategy, HashLocationStrategy } from '@angular/common';
+import { LocationStrategy, HashLocationStrategy, registerLocaleData } from '@angular/common';
+import locatePt from '@angular/common/locales/pt';
 
 import { ROUTES } from 'app/app.routes';
 
@@ -26,6 +27,8 @@ import {
 
 import { SharedModule } from 'app/shared';
 import { ApplicationErrorHandler } from './app.error-handler';
+
+registerLocaleData(locatePt, 'pt');
 
 @NgModule({
   declarations: [
@@ -61,7 +64,7 @@ import { ApplicationErrorHandler } from './app.error-handler';
     },
     {
       provide: LOCALE_ID,
-      useValue: 'pt-BR'
+      useValue: 'pt'
     },
     {
       provide: ErrorHandler,
