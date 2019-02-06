@@ -1,10 +1,9 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Router, NavigationEnd } from '@angular/router';
-import { Observable } from 'rxjs/Observable';
 
-import 'rxjs/add/operator/do';
-import 'rxjs/add/operator/filter';
+import { Observable } from 'rxjs';
+import { tap, filter } from 'rxjs/operators';
 
 import { MEAT_API } from 'app/app.api';
 import { User } from './user.model';
@@ -21,7 +20,9 @@ export class LoginService {
         private router: Router
     ) {
         this.router.events
-            .filter( event => event instanceof NavigationEnd)
+            .pipe(
+                filter( event => event instanceof NavigationEnd)
+            )
             .subscribe(( navigation: NavigationEnd) => this.lasturl = navigation.url )
     }
 
@@ -30,7 +31,9 @@ export class LoginService {
             email: email,
             password: password
         })
-        .do((user: User) => this.user = user)
+        .pipe(
+            tap((user: User) => this.user = user)
+        )
     }
 
     logout(): void {

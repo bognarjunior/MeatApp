@@ -3,7 +3,8 @@ import { FormGroup, FormControl, FormBuilder, Validators, AbstractControl } from
 import { Router } from '@angular/router';
 import { RadioOption } from 'app/shared';
 
-import 'rxjs/add/operator/do';
+
+import { tap } from 'rxjs/operators';
 
 import { OrderService } from './order.service';
 import { CartItem } from '../restaurant-detail';
@@ -99,7 +100,9 @@ export class OrderComponent implements OnInit {
       (item: CartItem) => new OrderItem(item.quantity, item.menuItem.id)
     );
     this.orderService.checkOrder(order)
-      .do((orderId: string) => this.orderId = orderId)
+      .pipe(
+        tap((orderId: string) => this.orderId = orderId)
+      )
       .subscribe((orderId: string) => {
         this.router.navigate(['/order-summary']);
         this.orderService.clear();
