@@ -20,7 +20,8 @@ import {
   ReviewsComponent,
   OrderSummaryComponent,
   NotFoundComponent,
-  LoginComponent
+  LoginComponent,
+  UserDetailComponent
 } from 'app';
 
 import { SharedModule } from 'app/shared';
@@ -39,7 +40,8 @@ import { SharedModule } from 'app/shared';
     ReviewsComponent,
     OrderSummaryComponent,
     NotFoundComponent,
-    LoginComponent
+    LoginComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,
