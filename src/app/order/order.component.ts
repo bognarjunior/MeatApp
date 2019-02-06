@@ -1,10 +1,14 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormBuilder, Validators, AbstractControl } from '@angular/forms';
+import { Router } from '@angular/router';
+import { RadioOption } from 'app/shared';
+
+import 'rxjs/add/operator/do';
+
 import { OrderService } from './order.service';
 import { CartItem } from '../restaurant-detail';
 import { Order, OrderItem } from './order.model';
-import { Router } from '@angular/router';
-import { RadioOption } from 'app/shared';
+
 
 @Component({
   selector: 'mt-order',
@@ -13,6 +17,7 @@ import { RadioOption } from 'app/shared';
 export class OrderComponent implements OnInit {
 
   orderForm: FormGroup;
+  orderId: string;
 
   emailPattern = /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
   numberPattern = /^[0-9]*$/;
@@ -80,12 +85,17 @@ export class OrderComponent implements OnInit {
     this.orderService.remove(item);
   }
 
+  isOrderCompleted(): boolean {
+    return this.orderId !== undefined;
+  }
+
   checkOrder(order: Order) {
     order.orderItems = this.cartItems().map(
       (item: CartItem) => new OrderItem(item.quantity, item.menuItem.id)
     );
-    this.orderService.checkOrder(order).subscribe(
-      (orderId: string) => {
+    this.orderService.checkOrder(order)
+      .do((orderId: string) => this.orderId = orderId)
+      .subscribe((orderId: string) => {
         this.router.navigate(['/order-summary']);
         this.orderService.clear();
     });
