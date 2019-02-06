@@ -1,5 +1,5 @@
+import { NgModule, LOCALE_ID, ErrorHandler } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule, LOCALE_ID } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, PreloadAllModules } from '@angular/router';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -25,6 +25,7 @@ import {
 } from 'app';
 
 import { SharedModule } from 'app/shared';
+import { ApplicationErrorHandler } from './app.error-handler';
 
 @NgModule({
   declarations: [
@@ -61,6 +62,10 @@ import { SharedModule } from 'app/shared';
     {
       provide: LOCALE_ID,
       useValue: 'pt-BR'
+    },
+    {
+      provide: ErrorHandler,
+      useClass: ApplicationErrorHandler
     }
   ],
   bootstrap: [AppComponent]
