@@ -36,7 +36,8 @@ export const ROUTES: Routes = [
   {
     path: 'order',
     loadChildren: './order/order.module#OrderModule',
-    canLoad: [LoggedInGuard]
+    canLoad: [LoggedInGuard],
+    canActivate: [LoggedInGuard]
   },
   {
     path: 'order-summary',
